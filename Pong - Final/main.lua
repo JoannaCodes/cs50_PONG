@@ -232,6 +232,7 @@ function love.update(dt)
                 Player2.dy = -PADDLE_SPEED
             end
         end]]
+
     end
 
     Player1:update(dt)
