@@ -201,7 +201,7 @@ function love.update(dt)
         Player2.dy = 0 --no movement
     end
 
-        -- AI Implementation
+    -- AI Implementation
     if gamestate == 'play' then
         --player 1 AI with decceleration
         if ball.dx < 0 then
