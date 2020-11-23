@@ -201,6 +201,39 @@ function love.update(dt)
         Player2.dy = 0 --no movement
     end
 
+        -- AI Implementation
+    if gamestate == 'play' then
+        --player 1 AI with decceleration
+        if ball.dx < 0 then
+            if Player1.y + 10 <= ball.y + 2 then
+                Player1.dy = PADDLE_SPEED
+                if ball.x < VIRTUAL_WIDTH / 4 then
+                    Player1.dy = PADDLE_SPEED * 0.5
+                    if Player1.dy < 20 then
+                        Player1.dy = 20
+                    end
+                end
+            else
+                Player1.dy = -PADDLE_SPEED
+                if ball.x < VIRTUAL_WIDTH / 4 then
+                    Player1.dy = -PADDLE_SPEED * 0.5
+                    if Player1.dy > -20 then
+                        Player1.dy = -20
+                    end
+                end
+            end
+        end
+        
+        --player 2 AI
+        if ball.dx > 0 then
+            if Player2.y + 10 <= ball.y + 2 then
+                Player2.dy = PADDLE_SPEED
+            else
+                Player2.dy = -PADDLE_SPEED
+            end
+        end
+    end
+
     Player1:update(dt)
     Player2:update(dt)
 end
