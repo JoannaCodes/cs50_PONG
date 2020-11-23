@@ -224,14 +224,14 @@ function love.update(dt)
             end
         end
         
-        --[[player 2 AI
+        --player 2 AI
         if ball.dx > 0 then
             if Player2.y + 10 <= ball.y + 2 then
                 Player2.dy = PADDLE_SPEED
             else
                 Player2.dy = -PADDLE_SPEED
             end
-        end]]
+        end
 
     end
 
