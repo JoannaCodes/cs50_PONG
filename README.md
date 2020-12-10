@@ -11,5 +11,4 @@
 
 
 Code Location:
-<p>PlayState.lua --> Line 52</p>
-<p>ScoreState.lua --> Line 36</p>
+<p>main.lua --> Line 211</p>
